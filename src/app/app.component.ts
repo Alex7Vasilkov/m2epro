@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'm2e-root',
+    template: '<m2e-home></m2e-home>'
 })
 export class AppComponent {
-  title = 'm2epro';
 }
