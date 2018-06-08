@@ -1,0 +1,166 @@
+/*NAVIGATION*/
+
+.subtitle {
+    color: #ddd;
+    text-transform: none;
+    margin-left: 10px;
+    font-family: futura;
+    font-size: 18px;
+}
+
+.navbar {
+    padding: 0px;
+    box-shadow: 0px 4px 5px #bbb;
+    a.navbar-brand {
+        height: 58px;
+        transform: translateY(12px);
+        &.ml65 {
+            margin-left: 65px;
+        }
+    }
+    #navbarNav {
+        ul {
+            height: inherit;
+            li {
+                a.nav-link {
+                    text-align: center;
+                    line-height: 45px;
+                    height: 58px;
+                    &:hover {
+                        background: #333 !important;
+                    }
+                }
+                .dropdown-menu {
+                    background-color: #202020 !important;
+                    .dropdown-item {
+                        text-align: center;
+                        color: white;
+                        font-size: 14px;
+                        &:hover {
+                            background: #333 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    li.separate {
+        border-right: 1px solid #666;
+    }
+}
+
+.navbar-dark {
+    background-color: #202020 !important;
+}
+
+/*END NAVIGATION*/
+
+/*MAIN*/
+
+.visible {}
+
+main {
+    margin: 58px 0 ;
+    div.submenu {
+        padding: 30px 0 10px 0;
+        div.tabs {
+            flex-direction: row;
+            a {
+                padding: 7px 25px;
+                font-size: 22px !important;
+                font-family: futuramc;
+                border-radius: 0px;
+                border: none;
+                background-color: #F2F2F2;
+                &:first-child {
+                    min-width: 164px;
+                    width: 164px;
+                    margin-right: 10px;
+                }
+                &:nth-child(2) {
+                    min-width: 82px;
+                    width: 82px;
+                    margin-right: 10px;
+                    padding-left: 23px;
+                }
+                &:last-child {
+                    min-width: 144px;
+                    width: 144px;
+                }
+                &.active {
+                    background-color: #9fc343 !important;
+                }
+            }
+        }
+        .search-container {
+            width: 300px;
+            margin-top: 10px;
+            input {
+                height: 37px;
+                color: #777777;
+                font-size: 13px;
+                border: 1px solid #d0d0d0;
+                border-radius: 0px;
+                background-color: #fcfcfc;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+                &:focus {
+                    background: #fafafa;
+                    border-color: #999999;
+                    outline: none;
+                    box-shadow: rgb(153, 153, 153) 0px 0px 5px 0px;
+                }
+            }
+            button.btn-search {
+                position: absolute;
+                top: 0;
+                right: 2px;
+                width: 30px;
+                height: 100%;
+                cursor: pointer;
+                opacity: 0.5;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                z-index: 100000;
+            }
+        }
+    }
+}
+
+/*END MAIN*/
+
+/*FOOTER*/
+
+footer {
+    color: #666;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #202020 !important;
+    ul.nav {
+        height: 60px;
+        li {
+            padding: 0px;
+            margin-right: 10px;
+            a {
+                color: #666;
+                padding: 0px;
+                &:hover {
+                    color: #999;
+                }
+                span {
+                    border-right: 1px solid #666;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+/*END FOOTER*/
+
+
+

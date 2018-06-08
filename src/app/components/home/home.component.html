@@ -1,3 +1,84 @@
-<p>
-  home works!
-</p>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand ml65" href="/">
+            <img src="../../../assets/img/m2e-logo.png" height="34" width="90" alt="m2epro"/>
+            <small class="subtitle">support</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active separate">
+                    <a class="nav-link" href="https://m2epro.com/" target="_blank">About M2E</a>
+                </li>
+                <li class="nav-item active separate dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Install/Upgrade</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="http://docs.m2epro.com/x/VAM0AQ" target="_blank">For Magento v1.x.x</a>
+                        <a class="dropdown-item" href="http://docs.m2epro.com/x/ZgM0AQ" target="_blank">For Magento v2.x.x</a>
+                    </div>
+                </li>
+                <li class="nav-item active separate">
+                    <a class="nav-link" href="http://docs.m2epro.com/" target="_blank">Documentation</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://community.m2epro.com/" target="_blank">Forum</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="container">
+        <div class="submenu">
+            <div class="row">
+                <div class="col-xs-8 col-md-4">
+                    <div class="list-group tabs" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="base-tab" data-toggle="list" href="#tab-home" role="tab" aria-controls="home">Knowledge Base</a>
+                        <a class="list-group-item list-group-item-action" id="ideas-tab" data-toggle="list" href="#tab-ideas" role="tab" aria-controls="profile">Ideas</a>
+                        <a [class.invisible]="!searchVisibility" class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#tab-search" role="tab" aria-controls="profile">Search results</a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-8">
+                    <div class="search-container input-group ml-auto">
+                        <input type="text" class="form-control" placeholder="Search.." name="search">
+                        <div class="input-group-append">
+                            <button class="btn-search">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="base-tab">Knowledge Base</div>
+                    <div class="tab-pane fade" id="tab-ideas" role="tabpanel" aria-labelledby="ideas-tab">Ideas</div>
+                    <div [class.invisible]="!searchVisibility" class="tab-pane fade" id="tab-search" role="tabpanel" aria-labelledby="search-tab">Search result</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <span class="left">Copyright © M2E Pro</span>
+
+            <ul class="nav ml-auto">
+                <li class="nav-link"><a class="nav-link" href="https://m2epro.com/terms-and-conditions" target="_blank"><span>Terms & Conditions</span></a></li>
+                <li class="nav-link"><a class="nav-link" href="https://m2epro.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!--<span class="text-muted">footer</span>-->
+</footer>

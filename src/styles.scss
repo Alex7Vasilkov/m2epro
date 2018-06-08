@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "futura";
+    src: url("assets/fonts/Futura-Light/Futura-Light.woff");
+}
+@font-face {
+    font-family: "futuramc";
+    src: url("assets/fonts/futuramc/futuramc.woff");
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
