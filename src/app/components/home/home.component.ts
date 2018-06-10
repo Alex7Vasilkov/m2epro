@@ -1,5 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
+import {DataCast} from '../../model/data-cast';
+import {Subscription} from 'rxjs/internal/Subscription';
 
 @Component({
     selector: 'm2e-home',
@@ -8,12 +10,22 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
     public searchActive: any = {active: false, show: false, invisible: true};
+    private subscription: Subscription;
 
     @ViewChild('info') info: ElementRef<any>;
     @ViewChild('base') base: ElementRef<any>;
     @ViewChild('ideas') ideas: ElementRef<any>;
 
-    constructor(private router: Router) {
+    constructor(private router: Router,
+                private dc: DataCast) {
+        this.subscription = this.dc.componentAction$.subscribe(
+            (status: string) => {
+                switch (status) {
+                    case 'open': this.search(null); break;
+                    case 'clear': this.hideSearch(); break;
+                }
+            }
+        );
     }
 
     ngOnInit() {

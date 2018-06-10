@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
-/*import {Article, Knowledge} from './knowledge.model';*/
-/*import {Idea} from './idea.model';*/
-import {StaticDatasource} from './static.datasource';
 import {ModelModule} from './model.module';
+import {Subject} from 'rxjs/internal/Subject';
 
 @Injectable({
     providedIn: ModelModule
 })
 export class DataCast {
+
+    componentActionSource = new Subject<any>();
+    componentAction$ = this.componentActionSource.asObservable();
 
     constructor() {
     }
@@ -18,6 +19,10 @@ export class DataCast {
 
     public cloneIdea(obj: Idea | any): Idea {
         return new Idea(obj);
+    }
+
+    public action(status): void {
+        this.componentActionSource.next(status);
     }
 }
 

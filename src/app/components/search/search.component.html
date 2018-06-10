@@ -17,14 +17,14 @@
         <div *ngIf="filterMode === 'all' || filterMode === 'art'">
             <li class="search-result-entry" *ngFor="let art of articles">
                 <span class="icon base"></span>
-                <a [routerLink]="['/knowledge', art.issuerId, 'detailed', art.id]">{{art.name}}</a>
+                <a [routerLink]="['/knowledge', art.issuerId, 'detailed', art.id]" (click)="clearSearch()">{{art.name}}</a>
                 <p>{{art.description | slice:0:110}}<span *ngIf="art.description.length > 110">...</span></p>
             </li>
         </div>
         <div *ngIf="filterMode === 'all' || filterMode === 'idea'">
             <li class="search-result-entry" *ngFor="let idea of suggestions">
                 <span class="icon idea"></span>
-                <a [routerLink]="['/ideas', idea.issuerId, 'detailed', idea.id]">{{idea.name}}</a>
+                <a [routerLink]="['/ideas', idea.issuerId, 'detailed', idea.id]" (click)="clearSearch()">{{idea.name}}</a>
                 <p>{{idea.description | slice:0:110}}<span *ngIf="idea.description.length > 110">...</span></p>
             </li>
         </div>

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Article, Knowledge} from '../../model/knowledge.model';
 import {Model} from '../../model/repository.model';
 import {Idea, Suggestion} from '../../model/idea.model';
+import {DataCast} from '../../model/data-cast';
 
 @Component({
     selector: 'm2e-search',
@@ -15,10 +16,12 @@ export class SearchComponent implements OnInit {
     private knowledges: Knowledge[] = [];
     private ideas: Idea[] = [];
 
-    constructor(private repository: Model) {
+    constructor(private repository: Model,
+                private dc: DataCast) {
     }
 
     ngOnInit() {
+        this.dc.action('open');
         this.getKnowledges();
         this.getIdeas();
         this.runAnimate();
@@ -32,7 +35,11 @@ export class SearchComponent implements OnInit {
         return this.ideas.map(know => know.articles).reduce((flat, current) => flat.concat(current), []);
     }
 
-    changeFilterMode(newMode) {
+    public clearSearch(): void {
+        this.dc.action('clear');
+    }
+
+    public changeFilterMode(newMode): void {
         this.runAnimate();
         this.filterMode = newMode;
     }
