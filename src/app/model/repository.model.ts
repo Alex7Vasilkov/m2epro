@@ -20,6 +20,10 @@ export class Model {
         return this.knowledge;
     }
 
+    public getKnowledge(id: number): Knowledge {
+        return this.knowledge.filter(know => know.id === id)[0];
+    }
+
     public getIdeas(): Idea[] {
         return this.idea;
     }

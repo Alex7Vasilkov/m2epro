@@ -4,6 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import { CardComponent } from './card/card.component';
 import {RouterModule} from '@angular/router';
+import { KnowlegdeComponent } from './knowlegde/knowlegde.component';
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import {RouterModule} from '@angular/router';
     declarations: [
         HomeComponent,
         DashboardComponent,
-        CardComponent
+        CardComponent,
+        KnowlegdeComponent
     ],
     exports: [
         HomeComponent,
