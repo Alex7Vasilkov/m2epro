@@ -10,6 +10,8 @@ import {Idea, Suggestion} from '../../model/idea.model';
 })
 export class SearchComponent implements OnInit {
     public filterMode: string = 'all';
+    public isLoaded: boolean = false;
+    public animate: boolean = false;
     private knowledges: Knowledge[] = [];
     private ideas: Idea[] = [];
 
@@ -19,6 +21,7 @@ export class SearchComponent implements OnInit {
     ngOnInit() {
         this.getKnowledges();
         this.getIdeas();
+        this.runAnimate();
     }
 
     get articles(): Article[] {
@@ -30,6 +33,7 @@ export class SearchComponent implements OnInit {
     }
 
     changeFilterMode(newMode) {
+        this.runAnimate();
         this.filterMode = newMode;
     }
 
@@ -39,5 +43,10 @@ export class SearchComponent implements OnInit {
 
     private getIdeas() {
         this.ideas = this.repository.getIdeas();
+    }
+
+    private runAnimate(): void {
+        this.animate = false;
+        setTimeout(() =>  this.isLoaded = this.animate = true, 100);
     }
 }

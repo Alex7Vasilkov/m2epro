@@ -1,4 +1,10 @@
+.animate {
+    transition: .5s;
+    opacity: 1 !important;
+}
+
 menu.mini-tabs {
+    opacity: 0;
     list-style: none;
     padding: 0;
     margin-top: 0;
@@ -48,7 +54,9 @@ menu.mini-tabs {
 }
 
 div.search-result {
+    opacity: 0;
     ul {
+        opacity: 0;
         list-style: none;
         margin: 0;
         padding: 0;
