@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Knowledge} from './knowledge.model';
+import {Article, Knowledge} from './knowledge.model';
 import {Idea} from './idea.model';
 import {StaticDatasource} from './static.datasource';
 import {ModelModule} from './model.module';
@@ -22,6 +22,10 @@ export class Model {
 
     public getKnowledge(id: number): Knowledge {
         return this.knowledge.filter(know => know.id === id)[0];
+    }
+
+    public getArticle(id: number, artId: number): Article {
+        return this.knowledge.filter(know => know.id === id)[0].articles[--artId];
     }
 
     public getIdeas(): Idea[] {
