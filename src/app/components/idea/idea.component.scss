@@ -102,6 +102,7 @@ ul.idea-container {
     li {
         list-style-type: none;
         margin: 15px 0px;
+        min-width: 534px;
         div.vote-box {
             width: 80px;
             display: inline-block;
@@ -154,7 +155,7 @@ ul.idea-container {
         div.info-box {
             display: inline-block;
             padding: 12px;
-            width: 85%;
+            width: 75%;
         }
         a {
             color: #9fc343;

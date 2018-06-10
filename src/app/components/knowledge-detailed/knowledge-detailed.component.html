@@ -1,0 +1,17 @@
+<div class="row" [class.animate]="isLoaded">
+    <div class="col-8" [class.animate]="animate">
+        <h2>{{article.name}}</h2>
+        <a [routerLink]="['../../']">← back to {{knowledge.title}}</a>
+        <textarea readonly [value]="article.description"></textarea>
+    </div>
+    <div class="col-4">
+        <ul class="aside">
+            <li><a [routerLink]="['../../']">{{knowledge.title}}</a></li>
+            <li *ngFor="let article of knowledge.articles">
+                <a [routerLink]="['../', article.id]" routerLinkActive="selected">
+                    {{article.name | slice:0:43}}<span *ngIf="article.name.length > 43">...</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
