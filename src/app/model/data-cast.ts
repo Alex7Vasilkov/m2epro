@@ -35,6 +35,7 @@ class Knowledge {
 
 class Article {
     public id: number;
+    public issuerId: number;
     public name: string;
     public description: string;
 
@@ -59,6 +60,7 @@ class Idea {
 
 class Suggestion {
     public id: number;
+    public issuerId: number;
     public votes: number;
     public name: string;
     public description: string;

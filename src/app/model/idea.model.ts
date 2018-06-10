@@ -10,6 +10,7 @@ export class Idea {
 export class Suggestion {
     constructor(
         public id?: number,
+        public issuerId?: number,
         public votes?: number,
         public name?: string,
         public description?: string,

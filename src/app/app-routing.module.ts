@@ -6,6 +6,7 @@ import {KnowlegdeComponent} from './components/knowlegde/knowlegde.component';
 import {IdeaComponent} from './components/idea/idea.component';
 import {KnowledgeDetailedComponent} from './components/knowledge-detailed/knowledge-detailed.component';
 import {IdeaDetailedComponent} from './components/idea-detailed/idea-detailed.component';
+import {SearchComponent} from './components/search/search.component';
 
 const routes: Routes = [
     {
@@ -18,7 +19,7 @@ const routes: Routes = [
             {path: 'ideas', component: DashboardComponent},
             {path: 'ideas/:id', component: IdeaComponent},
             {path: 'ideas/:id/detailed/:artId', component: IdeaDetailedComponent},
-            {path: 'search', component: DashboardComponent}
+            {path: 'search', component: SearchComponent}
         ]
     }
 ];

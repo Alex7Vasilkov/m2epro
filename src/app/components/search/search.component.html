@@ -1,0 +1,32 @@
+<menu class="mini-tabs">
+    <ul>
+        <li>
+            <a (click)="changeFilterMode('all')" [class.selected]="filterMode === 'all'">All ({{articles.length + suggestions.length}})</a>
+        </li>
+        <li>
+            <a (click)="changeFilterMode('art')" [class.selected]="filterMode === 'art'">Articles ({{articles.length}})</a>
+        </li>
+        <li>
+            <a (click)="changeFilterMode('idea')" [class.selected]="filterMode === 'idea'">Ideas ({{suggestions.length}})</a>
+        </li>
+    </ul>
+</menu>
+
+<div class="search-result">
+    <ul>
+        <div *ngIf="filterMode === 'all' || filterMode === 'art'">
+            <li class="search-result-entry" *ngFor="let art of articles">
+                <span class="icon base"></span>
+                <a [routerLink]="['/knowledge', art.issuerId, 'detailed', art.id]">{{art.name}}</a>
+                <p>{{art.description | slice:0:110}}<span *ngIf="art.description.length > 110">...</span></p>
+            </li>
+        </div>
+        <div *ngIf="filterMode === 'all' || filterMode === 'idea'">
+            <li class="search-result-entry" *ngFor="let idea of suggestions">
+                <span class="icon idea"></span>
+                <a [routerLink]="['/ideas', idea.issuerId, 'detailed', idea.id]">{{idea.name}}</a>
+                <p>{{idea.description | slice:0:110}}<span *ngIf="idea.description.length > 110">...</span></p>
+            </li>
+        </div>
+    </ul>
+</div>

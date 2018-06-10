@@ -1,0 +1,83 @@
+menu.mini-tabs {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        list-style-type: none;
+        margin: 15px 0px;
+        margin-right: 2px;
+        display: inline-block;
+        color: rgb(51, 51, 51);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        a {
+            background: #F3F6FA url(../../../assets/img/icons/white-210x5.png) 50% -5px repeat-x;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: block;
+            line-height: 2em;
+            margin: 1px 0 5px 0;
+            padding: 0 12px;
+            text-align: center;
+            white-space: nowrap;
+            color: grey;
+            font-size: 13px;
+            &.selected {
+                color: #FFF;
+                font-weight: bold;
+                background-color: #9fc343;
+                background-position: 50% 100%;
+                margin-bottom: 0;
+                min-width: 60px;
+                padding-bottom: 5px;
+                -moz-border-radius: 0;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                background-origin: padding-box;
+            }
+        }
+    }
+}
+
+div.search-result {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li.search-result-entry {
+            margin-bottom: 30px;
+            span.icon {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                color: #333;
+                &.base {
+                    background: url(../../../assets/img/icons/books.png) no-repeat;
+                }
+                &.idea {
+                    background: url(../../../assets/img/icons/idea.png) no-repeat;
+                }
+            }
+            a {
+                color: #9fc343;
+                font-size: 16px;
+                vertical-align: middle;
+                display: inline-block;
+                padding-bottom: 13px;
+                padding-left: 8px;
+            }
+            p {
+                font-size: 13px !important;
+                line-height: 20px;
+            }
+        }
+    }
+}

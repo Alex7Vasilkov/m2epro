@@ -9,6 +9,7 @@ export class Knowledge {
 export class Article {
     constructor(
         public id?: number,
+        public issuerId?: number,
         public name?: string,
         public description?: string
     ) {}

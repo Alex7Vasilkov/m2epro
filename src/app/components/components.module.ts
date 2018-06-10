@@ -8,6 +8,7 @@ import { KnowlegdeComponent } from './knowlegde/knowlegde.component';
 import { IdeaComponent } from './idea/idea.component';
 import { KnowledgeDetailedComponent } from './knowledge-detailed/knowledge-detailed.component';
 import { IdeaDetailedComponent } from './idea-detailed/idea-detailed.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { IdeaDetailedComponent } from './idea-detailed/idea-detailed.component';
         KnowlegdeComponent,
         IdeaComponent,
         KnowledgeDetailedComponent,
-        IdeaDetailedComponent
+        IdeaDetailedComponent,
+        SearchComponent
     ],
     exports: [
         HomeComponent,
