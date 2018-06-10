@@ -1,11 +1,11 @@
-<div class="row">
-    <div class="col-9">
+<div class="row" [class.animate]="isLoaded">
+    <div class="col-9" [class.animate]="animate">
         <h2>{{knowledge.title}}</h2>
         <a [routerLink]="['../']">← back to Knowledge Base</a>
 
         <ul>
             <li *ngFor="let article of knowledge.articles">
-                <a [routerLink]="[knowledge.id + '/detailed', article.id]">{{article.name}}</a>
+                <a [routerLink]="['detailed', article.id]">{{article.name}}</a>
                 <p>{{article.description | slice:0:90}}<span *ngIf="article.description.length > 90">...</span></p>
             </li>
         </ul>

@@ -1,0 +1,50 @@
+<div class="row" [class.animate]="isLoaded">
+    <div class="col-9" [class.animate]="animate">
+        <h2>Suggestions for {{idea.title}}</h2>
+        <a [routerLink]="['../']">← back to Ideas</a>
+        <div class="post-idea float-right">
+            <a>Post Idea</a>
+        </div>
+        <menu class="mini-tabs">
+            <ul>
+                <li>
+                    <a (click)="changeFilterMode('hot')" [class.selected]="filterMode === 'hot'">Hot ideas</a>
+                </li>
+                <li>
+                    <a (click)="changeFilterMode('top')" [class.selected]="filterMode === 'top'">Top</a>
+                </li>
+                <li>
+                    <a (click)="changeFilterMode('new')" [class.selected]="filterMode === 'new'">New</a>
+                </li>
+            </ul>
+        </menu>
+        <ul class="idea-container">
+            <li *ngFor="let article of idea.articles">
+                <div class="vote-box">
+                    <div class="vote-count">
+                        <strong>{{article.votes}}</strong>
+                        <span>votes</span>
+                    </div>
+                    <div class="vote-state">
+                        <a class="like-clients-button vote">vote</a>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <a [routerLink]="['detailed', article.id]">{{article.name}}</a>
+                    <p>{{article.description | slice:0:180}}<span *ngIf="article.description.length > 180">...</span></p>
+                    <a class="comments" [routerLink]="['detailed', article.id]">{{article.comments.length}} comments...</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-3">
+        <ul class="aside">
+            <li *ngFor="let idea of ideas">
+                <a [routerLink]="['/ideas', idea.id]" routerLinkActive="selected">
+                    {{idea.title}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

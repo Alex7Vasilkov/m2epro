@@ -11,6 +11,7 @@ import {DataCast} from '../../model/data-cast';
 export class CardComponent implements OnInit, AfterViewInit {
     public articlesLength: number = 0;
     public hiddenArticle: boolean = false;
+    public isLoaded: boolean = false;
 
     @ViewChild('card') card: ElementRef<any>;
     @Input() data: Knowledge | Idea;
@@ -45,6 +46,7 @@ export class CardComponent implements OnInit, AfterViewInit {
                 this.hiddenArticle = true;
             } else {
                 clearInterval(id);
+                this.isLoaded = true;
             }
         }, 0);
     }

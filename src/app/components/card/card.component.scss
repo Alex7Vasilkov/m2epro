@@ -1,4 +1,9 @@
-div {
+div.cards {
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+div.animate {
+    opacity: 1 !important;
 }
 h3 a {
     color: #333333;

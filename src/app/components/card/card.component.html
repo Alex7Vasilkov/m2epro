@@ -1,4 +1,4 @@
-<div #card>
+<div #card class="cards" [class.animate]="isLoaded">
     <h3><a [routerLink]="[data.id]">{{data.title}}</a></h3>
     <ul>
         <li *ngFor="let article of data.articles">

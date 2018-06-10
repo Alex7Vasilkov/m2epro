@@ -59,6 +59,7 @@ class Idea {
 
 class Suggestion {
     public id: number;
+    public votes: number;
     public name: string;
     public description: string;
     public author: string;
@@ -67,6 +68,7 @@ class Suggestion {
 
     constructor(obj: Suggestion) {
         this.id = obj && obj.id;
+        this.votes = obj && obj.votes;
         this.name = obj && obj.name;
         this.description = obj && obj.description;
         this.author = obj && obj.author;

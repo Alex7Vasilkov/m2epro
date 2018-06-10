@@ -5,6 +5,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import { CardComponent } from './card/card.component';
 import {RouterModule} from '@angular/router';
 import { KnowlegdeComponent } from './knowlegde/knowlegde.component';
+import { IdeaComponent } from './idea/idea.component';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { KnowlegdeComponent } from './knowlegde/knowlegde.component';
         HomeComponent,
         DashboardComponent,
         CardComponent,
-        KnowlegdeComponent
+        KnowlegdeComponent,
+        IdeaComponent
     ],
     exports: [
         HomeComponent,

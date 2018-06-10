@@ -1,5 +1,15 @@
 div.row {
     padding-top: 17px;
+    opacity: 0;
+}
+
+div.col-9 {
+    opacity: 0;
+}
+
+.animate {
+    transition: .5s;
+    opacity: 1 !important;
 }
 
 h2 {

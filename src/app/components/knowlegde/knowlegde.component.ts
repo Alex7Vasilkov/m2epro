@@ -10,13 +10,19 @@ import {Knowledge} from '../../model/knowledge.model';
 })
 export class KnowlegdeComponent implements OnInit {
     public id: number;
+    public isLoaded: boolean = false;
+    public animate: boolean = false;
+
     constructor(private route: ActivatedRoute,
                 private repository: Model) {
     }
 
     ngOnInit() {
         this.route.params.forEach(
-            (params: Params) => this.id = +params['id']
+            (params: Params) => {
+                this.id = +params['id'];
+                this.runAnimate();
+            }
         );
     }
 
@@ -26,5 +32,10 @@ export class KnowlegdeComponent implements OnInit {
 
     get knowledges(): Knowledge[] {
         return this.repository.getKnowledges();
+    }
+
+    private runAnimate(): void {
+        this.animate = false;
+        setTimeout(() =>  this.isLoaded = this.animate = true, 0);
     }
 }

@@ -27,4 +27,8 @@ export class Model {
     public getIdeas(): Idea[] {
         return this.idea;
     }
+
+    public getIdea(id: number): Idea {
+        return this.idea.filter(idea => idea.id === id)[0];
+    }
 }
