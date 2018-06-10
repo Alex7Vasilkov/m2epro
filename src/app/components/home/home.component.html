@@ -30,41 +30,33 @@
     </nav>
 </header>
 
-<main role="main">
+<main>
     <div class="container">
-        <div class="submenu">
-            <div class="row">
-                <div class="col-xs-8 col-md-4">
-                    <div class="list-group tabs" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="base-tab" data-toggle="list" href="#tab-home" role="tab" aria-controls="home">Knowledge Base</a>
-                        <a class="list-group-item list-group-item-action" id="ideas-tab" data-toggle="list" href="#tab-ideas" role="tab" aria-controls="profile">Ideas</a>
-                        <a [class.invisible]="!searchVisibility" class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#tab-search" role="tab" aria-controls="profile">Search results</a>
-                    </div>
+    <div class="submenu">
+        <div class="row">
+            <div class="col-xs-8 col-md-4">
+                <div class="list-group tabs" id="list-tab" role="tablist">
+                    <a #base (click)="hideSearch()" [routerLink]="['/knowledge']" routerLinkActive="active" class="list-group-item list-group-item-action" id="base-tab" data-toggle="list" href="#tab-base" role="tab" aria-controls="base">Knowledge Base</a>
+                    <a #ideas (click)="hideSearch()" [routerLink]="['/ideas']" routerLinkActive="active" class="list-group-item list-group-item-action" id="ideas-tab" data-toggle="list" href="#tab-ideas" role="tab" aria-controls="ideas">Ideas</a>
+                    <a [ngClass]="searchActive" class="list-group-item list-group-item-action" id="search-tab" data-toggle="list" href="#tab-search" role="tab" aria-controls="search">Search results</a>
                 </div>
-                <div class="col-xs-4 col-md-8">
-                    <div class="search-container input-group ml-auto">
-                        <input type="text" class="form-control" placeholder="Search.." name="search">
-                        <div class="input-group-append">
-                            <button class="btn-search">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
+            </div>
+            <div class="col-xs-4 col-md-8">
+                <div class="search-container input-group ml-auto">
+                    <input #info type="text" class="form-control" placeholder="Search.." name="search" (keyup.enter)="search(info.value)">
+                    <div class="input-group-append">
+                        <button class="btn-search" (click)="search(info.value)">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="tab-home" role="tabpanel" aria-labelledby="base-tab">Knowledge Base</div>
-                    <div class="tab-pane fade" id="tab-ideas" role="tabpanel" aria-labelledby="ideas-tab">Ideas</div>
-                    <div [class.invisible]="!searchVisibility" class="tab-pane fade" id="tab-search" role="tabpanel" aria-labelledby="search-tab">Search result</div>
-                </div>
-            </div>
-        </div>
+        <router-outlet></router-outlet>
     </div>
 </main>
 
@@ -72,13 +64,10 @@
     <div class="container">
         <div class="row">
             <span class="left">Copyright © M2E Pro</span>
-
             <ul class="nav ml-auto">
                 <li class="nav-link"><a class="nav-link" href="https://m2epro.com/terms-and-conditions" target="_blank"><span>Terms & Conditions</span></a></li>
                 <li class="nav-link"><a class="nav-link" href="https://m2epro.com/privacy-policy" target="_blank">Privacy Policy</a></li>
             </ul>
-
         </div>
     </div>
-    <!--<span class="text-muted">footer</span>-->
 </footer>

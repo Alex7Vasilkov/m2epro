@@ -1,0 +1,13 @@
+<div #card>
+    <h3><a [routerLink]="[data.id]">{{data.title}}</a></h3>
+    <ul>
+        <li *ngFor="let article of data.articles">
+            <a [routerLink]="[data.id + '/detailed', article.id]">{{article.name}}</a>
+        </li>
+        <li *ngIf="hiddenArticle" class="splice">
+            <a [routerLink]="[data.id]">{{'Show all ' + articlesLength + ' articles...'}}</a>
+        </li>
+    </ul>
+</div>
+
+

@@ -1,0 +1,26 @@
+div {
+}
+h3 a {
+    color: #333333;
+    font-size: 22px !important;
+    font-family: futuramc;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style-type: none;
+        margin-bottom: 15px;
+        a {
+            color: #9fc343;
+            font-size: 14px;
+        }
+        &.splice {
+            a {
+                color: grey;
+            }
+        }
+    }
+}
+
+
