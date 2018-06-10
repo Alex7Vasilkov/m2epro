@@ -5,6 +5,7 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {KnowlegdeComponent} from './components/knowlegde/knowlegde.component';
 import {IdeaComponent} from './components/idea/idea.component';
 import {KnowledgeDetailedComponent} from './components/knowledge-detailed/knowledge-detailed.component';
+import {IdeaDetailedComponent} from './components/idea-detailed/idea-detailed.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,7 @@ const routes: Routes = [
             {path: 'knowledge/:id/detailed/:artId', component: KnowledgeDetailedComponent},
             {path: 'ideas', component: DashboardComponent},
             {path: 'ideas/:id', component: IdeaComponent},
+            {path: 'ideas/:id/detailed/:artId', component: IdeaDetailedComponent},
             {path: 'search', component: DashboardComponent}
         ]
     }

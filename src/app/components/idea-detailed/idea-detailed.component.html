@@ -1,0 +1,37 @@
+<div class="row" [class.animate]="isLoaded">
+    <div class="col" [class.animate]="animate">
+        <h2>Suggestions for {{idea.title}}</h2>
+        <a [routerLink]="['../../']">← back to {{idea.title}}</a>
+        <div class="idea-container">
+            <div class="vote-box">
+                <div class="vote-count">
+                    <strong>{{suggestion.votes}}</strong>
+                    <span>votes</span>
+                </div>
+                <div class="vote-state">
+                    <a class="like-clients-button vote">vote</a>
+                </div>
+            </div>
+            <div class="info-box">
+                <a [routerLink]="['detailed', suggestion.id]">{{suggestion.name}}</a>
+                <p>{{suggestion.description}}</p>
+                <p class="author"><span>{{suggestion.author}}</span> shared this idea <span>{{suggestion.dateIdea | date}}</span></p>
+                <!--<a class="comments" [routerLink]="['detailed', suggestion.id]">{{suggestion.comments.length}} comments...</a>-->
+            </div>
+        </div>
+
+        <div class="add-comment">
+            <span>{{suggestion.comments.length}} comments</span>
+            <span><a>Post Comment</a></span>
+        </div>
+        <div class="comments-idea-box">
+            <div class="comment-idea-box" *ngFor="let com of suggestion.comments">
+                <span class="avatar"></span>
+                <div class="owner">
+                    <span>{{com.author}}</span><span> commented </span> <span>{{com.date | date: 'medium'}}</span>
+                </div>
+                <div>{{com.comment}}</div>
+            </div>
+        </div>
+    </div>
+</div>

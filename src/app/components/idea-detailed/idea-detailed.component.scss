@@ -1,0 +1,174 @@
+div.row {
+    padding-top: 17px;
+    opacity: 0;
+}
+
+div.col {
+    opacity: 0;
+}
+
+.animate {
+    transition: .5s;
+    opacity: 1 !important;
+}
+
+h2 {
+    color: black;
+    font-size: 22px !important;
+    line-height: 33px !important;
+    font-family: futuramc;
+    margin-bottom: 0px;
+    & + a {
+        font-size: small;
+        color: #999999 !important;
+    }
+}
+
+div.idea-container {
+    margin-top: 30px;
+    div.vote-box {
+        width: 80px;
+        display: inline-block;
+        vertical-align: top;
+        div.vote-count {
+            background-color: #FCFDFF;
+            border: 1px solid #CFD7E6;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            color: #8F9BB3;
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 3px;
+            padding: 12px 0 9px 0;
+            text-align: center;
+            strong {
+                color: #292C33;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            span {
+                box-sizing: border-box;
+            }
+        }
+        div.vote-state {
+            margin: 0;
+            padding: 0;
+            a {
+                margin: 0;
+                padding: 5px;
+                display: inline-block;
+                width: 100%;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                text-shadow: 0 -1px 1px #538402;
+                border: 1px solid #538402;
+                border-radius: 4px;
+                background-clip: padding-box;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.75) inset;
+                background-color: #9FC343;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    div.info-box {
+        display: inline-block;
+        padding: 12px;
+        width: 75%;
+        p.author {
+            font-size: 13px;
+            & span:first-child {
+                color: #9fc343;
+                font-weight: bold;
+            }
+            & span:last-child {
+                color: grey;
+                position: relative;
+                left: 8px;
+            }
+        }
+    }
+    a {
+        color: #9fc343;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1em;
+        margin-bottom: 2px;
+        display: inline-block;
+        &.comments {
+            font-weight: 400;
+            color: grey;
+            font-size: 14px;
+        }
+    }
+    P {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+
+div.add-comment {
+    text-align: right;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    span:last-child {
+        margin-left: 50px;
+        a {
+            margin-right: 80px;
+            font-size: 14px;
+            border: 1px solid #538402;
+            border-radius: 4px;
+            background-clip: padding-box;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.75) inset;
+            background-color: #9FC343;
+            color: white;
+            padding: 4px 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+div.comments-idea-box {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transform: translateX(90px);
+    div.comment-idea-box {
+        max-width: 730px;
+        vertical-align: top;
+        font-size: 13px;
+        span.avatar {
+            border: 1px solid #FFF;
+            -moz-box-shadow: rgba(0,0,0,0.25) 0 1px 1px;
+            -webkit-box-shadow: rgba(0,0,0,0.25) 0 1px 1px;
+            box-shadow: rgba(0,0,0,0.25) 0 1px 1px;
+            line-height: 1em;
+            margin: 0 0 0 -60px;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background: #F3F6FA url(../../../assets/img/icons/profile.png) 0 0 no-repeat;
+        }
+        div {
+            position: relative;
+            top: -40px;
+        }
+        div.owner {
+            margin-bottom: 10px;
+            span:first-child {
+                color: #9fc343;
+                font-weight: bold;
+            }
+            span:last-child {
+                color: grey;
+                position: relative;
+                left: 8px;
+            }
+        }
+    }
+}

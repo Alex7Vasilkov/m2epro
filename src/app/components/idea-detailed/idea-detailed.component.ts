@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {Model} from '../../model/repository.model';
 import {ActivatedRoute, Params} from '@angular/router';
-import {Article, Knowledge} from '../../model/knowledge.model';
+import {Idea, Suggestion} from '../../model/idea.model';
 
 @Component({
-    selector: 'm2e-knowledge-detailed',
-    templateUrl: './knowledge-detailed.component.html',
-    styleUrls: ['./knowledge-detailed.component.scss']
+    selector: 'm2e-idea-detailed',
+    templateUrl: './idea-detailed.component.html',
+    styleUrls: ['./idea-detailed.component.scss']
 })
-export class KnowledgeDetailedComponent implements OnInit {
+export class IdeaDetailedComponent implements OnInit {
     public id: number;
     public artId: number;
     public isLoaded: boolean = false;
@@ -28,12 +28,12 @@ export class KnowledgeDetailedComponent implements OnInit {
         );
     }
 
-    get knowledge(): Knowledge {
-        return this.repository.getKnowledge(this.id);
+    get idea(): Idea {
+        return this.repository.getIdea(this.id);
     }
 
-    get article(): Article {
-        return this.repository.getArticle(this.id, this.artId);
+    get suggestion(): Suggestion {
+        return this.repository.getSuggestion(this.id, this.artId);
     }
 
     private runAnimate(): void {

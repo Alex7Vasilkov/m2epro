@@ -202,25 +202,34 @@ export class StaticDatasource {
 
     private ideas: Idea[] = [
         new Idea(1, 'Amazon Repricing Service', [
-            new Suggestion(1, (Math.round(Math.random() * 20)), 'Seller Fulfilled Prime', 'add a custom scenario that will compete with SFP', 'Aaron Englander shared this idea', new Date().getTime(), [
+            new Suggestion(1, (Math.round(Math.random() * 20)), 'Seller Fulfilled Prime', 'add a custom scenario that will compete with SFP', 'Aaron Englander ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(2, (Math.round(Math.random() * 20)), 'Rule to beat buy box', 'It would be great to have a rule which would automatically reduce the product price in increments until either the buy box is achieved or the minimum price is reached.', 'Stuart shared this idea', new Date().getTime(), [
+            new Suggestion(2, (Math.round(Math.random() * 20)), 'Rule to beat buy box', 'It would be great to have a rule which would automatically reduce the product price in increments until either the buy box is achieved or the minimum price is reached.', 'Stuart ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
         ]),
         new Idea(2, 'Other Sales Channel', [
-            new Suggestion(1, (Math.round(Math.random() * 20)), 'Integration with Etsy', 'Any plans in the future?', 'Janice Bailey shared this idea', new Date().getTime(), [
+            new Suggestion(1, (Math.round(Math.random() * 20)), 'Integration with Etsy', 'Any plans in the future?', 'Janice Bailey ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(2, (Math.round(Math.random() * 20)), 'idealo.de Direktkauf', 'Germanys biggest price comparison allows customer with the feature "idealo Direktkauf" the checkout on their plattform', 'TheNittyGritty shared this idea', new Date().getTime(), [
+            new Suggestion(2, (Math.round(Math.random() * 20)), 'idealo.de Direktkauf', 'Germanys biggest price comparison allows customer with the feature "idealo Direktkauf" the checkout on their plattform', 'TheNittyGritty ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
             new Suggestion(3, (Math.round(Math.random() * 20)), 'Integration with eBid', 'eBid now have a pretty comprehensive API and they\'re starting to rank pretty well in Google SERPS.\n' +
                 '\n' +
                 'I think M2E should consider developing eBid integration. However, I think we may need a few +1\'s on this idea before they will consider it.\n' +
                 '\n' +
-                'If you think M2E should support eBid, please +1 this idea.', 'Henry Hayes shared this idea', new Date().getTime(), [
+                'If you think M2E should support eBid, please +1 this idea.', 'Henry Hayes ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
             new Suggestion(4, (Math.round(Math.random() * 20)), 'Integration with Real.de (used to be Hitmeister)', 'big german retail store chain bought and expanded the hitmeister online marketplace\n' +
@@ -228,58 +237,82 @@ export class StaticDatasource {
                 'https://www.real.de/\n' +
                 '\n' +
                 'Rest API\n' +
-                'https://www.real.de/api/v1/', 'Rainer Jenning shared this idea', new Date().getTime(), [
+                'https://www.real.de/api/v1/', 'Rainer Jenning ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(5, (Math.round(Math.random() * 20)), 'Integration with Houzz.com Marketplace', 'Houzz market place is growing so fast in home furnishing industry. The amount of Houzz orders sellers receive for home decor items is much more than any other marketplace even amazon. Thank you.', 'KT shared this idea', new Date().getTime(), [
+            new Suggestion(5, (Math.round(Math.random() * 20)), 'Integration with Houzz.com Marketplace', 'Houzz market place is growing so fast in home furnishing industry. The amount of Houzz orders sellers receive for home decor items is much more than any other marketplace even amazon. Thank you.', 'KT ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(6, (Math.round(Math.random() * 20)), 'Integration with Sears', 'Sears supposedly has similar sales potential as buy.com', 'Chris Haupt shared this idea', new Date().getTime(), [
+            new Suggestion(6, (Math.round(Math.random() * 20)), 'Integration with Sears', 'Sears supposedly has similar sales potential as buy.com', 'Chris Haupt ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(7, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(7, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(8, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(8, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(9, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(9, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(10, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(10, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(11, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(11, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(12, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(12, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(13, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry shared this idea', new Date().getTime(), [
+            new Suggestion(13, (Math.round(Math.random() * 20)), 'Integration with Newegg', 'Please, create an Integration with the Newegg', 'Dmitry ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
         ]),
         new Idea(3, 'eBay Integration', [
-            new Suggestion(1, (Math.round(Math.random() * 20)), 'eBay Plus Germany', 'eBay Plus is similar to Amazon Prime. There is no possibility for many products to activate this with M2E. This possibility should exist in the future.', 'TiWe shared this idea', new Date().getTime(), [
+            new Suggestion(1, (Math.round(Math.random() * 20)), 'eBay Plus Germany', 'eBay Plus is similar to Amazon Prime. There is no possibility for many products to activate this with M2E. This possibility should exist in the future.', 'TiWe ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
             new Suggestion(2, (Math.round(Math.random() * 20)), 'Import product views value from Ebay', 'Ebay does not allow the merchant to sort listings based on views. It would be great if M2E could bring this data into Magento where it can be sorted and analyzed. \n' +
                 '\n' +
-                'Taking this idea further. If it the eBay API allows the product views data to be imported, this date could be used to create synchronization rules. For example if a product has 0 views over 30 days, then stop the listing.', 'Roderick Khan shared this idea', new Date().getTime(), [
+                'Taking this idea further. If it the eBay API allows the product views data to be imported, this date could be used to create synchronization rules. For example if a product has 0 views over 30 days, then stop the listing.', 'Roderick Khan ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
         ]),
         new Idea(4, 'Amazon Integration', [
-            new Suggestion(1, (Math.round(Math.random() * 20)), 'Addition of Seller Central Features to mimic magento', 'I think it would be helpful if you can perform as many of the Seller Central tasks in Magento as possible...See a dashboard of open orders, sales summary (week, month, year), buyer messages. Also communications, receiving and responding to buyers messages. Also reports? Being able to run a report on my magento SKU for units sold on Amazon rather then an Amazon report of an ASIN', 'justin shared this idea', new Date().getTime(), [
+            new Suggestion(1, (Math.round(Math.random() * 20)), 'Addition of Seller Central Features to mimic magento', 'I think it would be helpful if you can perform as many of the Seller Central tasks in Magento as possible...See a dashboard of open orders, sales summary (week, month, year), buyer messages. Also communications, receiving and responding to buyers messages. Also reports? Being able to run a report on my magento SKU for units sold on Amazon rather then an Amazon report of an ASIN', 'justin ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
             new Suggestion(2, (Math.round(Math.random() * 20)), 'Alert or notification when there is an error in Magento order creation', 'When an Amazon gift order is processed, no address is given or passed to M2Epro, so no Magento order is created and an error is given.\n' +
                 'To create the order, the address field must manually be added to enable order creation.\n' +
                 '\n' +
-                'An alert or notification when there is an error in Magento order creation would be useful, so the order can be manually created', 'Neil shared this idea', new Date().getTime(), [
+                'An alert or notification when there is an error in Magento order creation would be useful, so the order can be manually created', 'Neil ', new Date().getTime(), [
+                new Comments(1, 'John Doe', new Date().getTime(), 'long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment long comment ', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
+                new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null),
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
-            new Suggestion(3, (Math.round(Math.random() * 20)), 'Amazon Buy Box Notification', 'It would be great if we could see in the Magento CMS that shows if your are the chosen vendor for the buy box on Amazon for a particular listing.', 'Jamie shared this idea', new Date().getTime(), [
+            new Suggestion(3, (Math.round(Math.random() * 20)), 'Amazon Buy Box Notification', 'It would be great if we could see in the Magento CMS that shows if your are the chosen vendor for the buy box on Amazon for a particular listing.', 'Jamie ', new Date().getTime(), [
                 new Comments(1, 'John Doe', new Date().getTime(), 'Same comment...', null)
             ]),
         ])

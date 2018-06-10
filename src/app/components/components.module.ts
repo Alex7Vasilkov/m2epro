@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import { KnowlegdeComponent } from './knowlegde/knowlegde.component';
 import { IdeaComponent } from './idea/idea.component';
 import { KnowledgeDetailedComponent } from './knowledge-detailed/knowledge-detailed.component';
+import { IdeaDetailedComponent } from './idea-detailed/idea-detailed.component';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { KnowledgeDetailedComponent } from './knowledge-detailed/knowledge-detai
         CardComponent,
         KnowlegdeComponent,
         IdeaComponent,
-        KnowledgeDetailedComponent
+        KnowledgeDetailedComponent,
+        IdeaDetailedComponent
     ],
     exports: [
         HomeComponent,
